@@ -1,0 +1,16 @@
+@import './styles/variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.875rem;
+}
+
+.App {
+  font-family: $font-family;
+  background-color: $primary-color;
+}

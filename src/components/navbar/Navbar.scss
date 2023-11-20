@@ -1,0 +1,82 @@
+@import "src/styles/variables";
+
+.header {
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
+
+  .me {
+    position: absolute;
+    left: 108px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &__name {
+      display: block;
+      color: $fontColor-4;
+      font-size: $fontSize-2;
+      font-weight: $fontWeight-2;
+      line-height: 20px;
+      letter-spacing: 0.3857142925262451px;
+      text-align: left;
+    }
+
+    &__role {
+      display: block;
+      color: $fontColor-3;
+      font-size: $fontSize-1;
+      font-weight: $fontWeight-1;
+      line-height: 18px;
+      letter-spacing: 0.3857142925262451px;
+      text-align: left;
+    }
+  }
+
+  .navbar {
+    font-family: 'Inter', sans-serif;
+    background-color: $secondary-color;
+    border-radius: 50px;
+    display: flex;
+    height: 80px;
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    &__link {
+      font-size: $fontSize-4;
+      text-decoration: none;
+      padding: 16px 20px;
+      color: $fontColor-4;
+
+      &__active {
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        background-color: $btnColor-2;
+        color: white;
+        height: 60px;
+        padding: 18px 40px;
+        border-radius: 60px;
+        text-align: center;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.015em;
+
+        &__cases {
+          width: 202px;
+        }
+
+        &__about {
+          width: 136px;
+        }
+
+        &__getInTouch {
+          width: 194px;
+          flex-wrap: initial;
+        }
+      }
+    }
+  }
+}
