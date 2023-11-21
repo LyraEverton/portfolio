@@ -1,0 +1,43 @@
+@import "variables";
+
+@mixin breakpoint-sm {
+  @media screen and (min-width: $port-sys-breakpoint-min-width-sm) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md {
+  @media screen and (min-width: $port-sys-breakpoint-min-width-md) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg {
+  @media screen and (min-width: $port-sys-breakpoint-min-width-lg) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xl {
+  @media screen and (min-width: $port-sys-breakpoint-min-width-xl) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xxl {
+  @media screen and (min-width: $port-sys-breakpoint-min-width-xxl) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xxxl {
+  @media screen and (min-width: $port-sys-breakpoint-min-width-xxxl) {
+    @content;
+  }
+}
+
+@mixin breakpoint-x4k {
+  @media screen and (min-width: $port-sys-breakpoint-min-width-x4k) {
+    @content;
+  }
+}

@@ -1,0 +1,83 @@
+// DESIGN TOKEN
+//
+// TOKEN
+// $product-type-attribute-role
+//
+// eg.:
+// $port-sys-font-family-primary
+// ---- --- ----------- -------
+// |    |   |           |
+// |    |   |           role
+// |    |   |
+// |    |   attribute
+// |    |
+// |    type
+// |
+// product
+//
+// Types:
+// - sys: system / design system
+// - comp: component
+//
+
+//Font Family
+$port-sys-font-family-primary: 'Space Grotesk', sans-serif;
+$port-sys-font-family-secondary: 'Inter', sans-serif;
+
+//Background Colors
+$port-sys-background-color-primary: #FFFFFF;
+$port-sys-background-color-secondary: #F7F7F7;
+//Background Colors - Blue Card
+$port-sys-background-color-1: #EDF0F9;
+$port-sys-background-color-2: #D9DFF2;
+//Background Colors - Gray Card
+$port-sys-background-color-3: #EAEAEA;
+$port-sys-background-color-4: #E3E3E3;
+//Background Colors - Green Card
+$port-sys-background-color-5: #E2FFE4;
+$port-sys-background-color-6: #BDF1C2;
+//Background Colors - Brown Card
+$port-sys-background-color-7: #FEE0D0;
+$port-sys-background-color-8: #F6C7AC;
+
+//Buttons
+$port-sys-btn-color-1: #7390F9;
+$port-sys-btn-color-2: #2A2C32;
+$port-sys-btn-color-3: #FFFFFF;
+$port-sys-btn-color-4: #47CA5C;
+
+//Color Fonts
+$port-sys-font-color-1: #2A2C32;
+$port-sys-font-color-2: #FFFFFF;
+$port-sys-font-color-3: #4B5563;
+$port-sys-font-color-4: #000000;
+$port-sys-font-color-5: #A1A1A1;
+$port-sys-font-color-6: #B2B2B2;
+
+//Font Sizes
+$port-sys-font-size-1: 0.875rem;
+$port-sys-font-size-2: 1rem;
+$port-sys-font-size-3: 1.125rem;
+$port-sys-font-size-4: 1.25rem;
+$port-sys-font-size-5: 2.25rem;
+$port-sys-font-size-6: 3rem;
+$port-sys-font-size-7: 6.25rem;
+
+//Font Weight
+$port-sys-font-weight-1: 400;
+$port-sys-font-weight-2: 700;
+
+//Breakpoints
+$port-sys-breakpoint-max-width: 40em;
+$port-sys-breakpoint-min-width-sm: 35.5em;
+$port-sys-breakpoint-min-width-md: 48em;
+$port-sys-breakpoint-min-width-lg: 64em;
+$port-sys-breakpoint-min-width-xl: 80em;
+$port-sys-breakpoint-min-width-xxl: 120em;
+$port-sys-breakpoint-min-width-xxxl: 160em;
+$port-sys-breakpoint-min-width-x4k: 240em;
+
+//Container
+$port-comp-container-max-width: 100%;
+
+

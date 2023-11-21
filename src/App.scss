@@ -1,16 +1,10 @@
-@import './styles/variables.scss';
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import 'styles/styles';
 
 html {
-  font-size: 0.875rem;
+  font-size: $port-sys-font-size-1;
+  font-family: $port-sys-font-family-primary;
 }
 
 .App {
-  font-family: $font-family;
-  background-color: $primary-color;
+  background-color: $port-sys-background-color-primary;
 }

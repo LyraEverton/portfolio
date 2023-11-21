@@ -1,0 +1,855 @@
+@import 'variables';
+
+$spaceAmounts: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
+$spaceAmountsSM: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
+$spaceAmountsMD: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
+$spaceAmountsLG: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
+$spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@each $space in $spaceAmounts {
+  $spaceName: null;
+  @if (str-index(#{$space}, '.')) {
+    $spaceName: str-replace(#{$space}, '.', '');;
+  } @else {
+    $spaceName: #{$space};
+  }
+  @if $space==auto {
+    .m-#{$spaceName} {
+      margin: #{$space} !important;
+    }
+
+    .mx-#{$spaceName} {
+      margin-left: #{$space} !important;
+      margin-right: #{$space} !important;
+    }
+
+    .my-#{$spaceName} {
+      margin-top: #{$space} !important;
+      margin-bottom: #{$space} !important;
+
+    }
+
+    .ml-#{$spaceName} {
+      margin-left: #{$space} !important;
+    }
+
+    .mr-#{$spaceName} {
+      margin-right: #{$space} !important;
+    }
+
+    .mb-#{$spaceName} {
+      margin-bottom: #{$space} !important;
+    }
+
+    .mt-#{$spaceName} {
+      margin-top: #{$space} !important;
+    }
+  } @else {
+    .m-#{$spaceName} {
+      margin: #{$space}rem !important;
+    }
+
+    .mx-#{$spaceName} {
+      margin-left: #{$space}rem !important;
+      margin-right: #{$space}rem !important;
+    }
+
+    .my-#{$spaceName} {
+      margin-top: #{$space}rem !important;
+      margin-bottom: #{$space}rem !important;
+
+    }
+
+    .ml-#{$spaceName} {
+      margin-left: #{$space}rem !important;
+    }
+
+    .mr-#{$spaceName} {
+      margin-right: #{$space}rem !important;
+    }
+
+    .mb-#{$spaceName} {
+      margin-bottom: #{$space}rem !important;
+    }
+
+    .mt-#{$spaceName} {
+      margin-top: #{$space}rem !important;
+    }
+
+    .p-#{$spaceName} {
+      padding: #{$space}rem !important;
+    }
+
+    .px-#{$spaceName} {
+      padding-left: #{$space}rem !important;
+      padding-right: #{$space}rem !important;
+    }
+
+    .py-#{$spaceName} {
+      padding-top: #{$space}rem !important;
+      padding-bottom: #{$space}rem !important;
+
+    }
+
+    .pl-#{$spaceName} {
+      padding-left: #{$space}rem !important;
+    }
+
+    .pr-#{$spaceName} {
+      padding-right: #{$space}rem !important;
+    }
+
+    .pb-#{$spaceName} {
+      padding-bottom: #{$space}rem !important;
+    }
+
+    .pt-#{$spaceName} {
+      padding-top: #{$space}rem !important;
+    }
+  }
+}
+
+@media screen and (min-width: $port-sys-breakpoint-min-width-sm) {
+  @each $space in $spaceAmountsSM {
+    $spaceName: null;
+    @if (str-index(#{$space}, '.')) {
+      $spaceName: str-replace(#{$space}, '.', '');;
+    } @else {
+      $spaceName: #{$space};
+    }
+    @if $space==auto {
+      .m-sm-#{$spaceName} {
+        margin: #{$space} !important
+      }
+
+      .mx-sm-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-sm-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-sm-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-sm-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-sm-#{$spaceName} {
+        margin-bottom: #{$space} !important
+      }
+
+      .mt-sm-#{$spaceName} {
+        margin-top: #{$space} !important
+      }
+    } @else {
+      .m-sm-#{$spaceName} {
+        margin: #{$space}rem !important;
+      }
+
+      .mx-sm-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+        margin-right: #{$space}rem !important;
+      }
+
+      .my-sm-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+        margin-bottom: #{$space}rem !important;
+
+      }
+
+      .ml-sm-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+      }
+
+      .mr-sm-#{$spaceName} {
+        margin-right: #{$space}rem !important;
+      }
+
+      .mb-sm-#{$spaceName} {
+        margin-bottom: #{$space}rem !important;
+      }
+
+      .mt-sm-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+      }
+
+      .p-sm-#{$spaceName} {
+        padding: #{$space}rem !important;
+      }
+
+      .px-sm-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+        padding-right: #{$space}rem !important;
+      }
+
+      .py-sm-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+        padding-bottom: #{$space}rem !important;
+
+      }
+
+      .pl-sm-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+      }
+
+      .pr-sm-#{$spaceName} {
+        padding-right: #{$space}rem !important;
+      }
+
+      .pb-sm-#{$spaceName} {
+        padding-bottom: #{$space}rem !important;
+      }
+
+      .pt-sm-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $port-sys-breakpoint-min-width-md) {
+  @each $space in $spaceAmountsMD {
+    $spaceName: null;
+    @if (str-index(#{$space}, '.')) {
+      $spaceName: str-replace(#{$space}, '.', '');;
+    } @else {
+      $spaceName: #{$space};
+    }
+    @if $space==auto {
+      .m-md-#{$spaceName} {
+        margin: #{$space} !important;
+      }
+
+      .mx-md-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-md-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-md-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-md-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-md-#{$spaceName} {
+        margin-bottom: #{$space} !important;
+      }
+
+      .mt-md-#{$spaceName} {
+        margin-top: #{$space} !important;
+      }
+    } @else {
+      .m-md-#{$spaceName} {
+        margin: #{$space}rem !important;
+      }
+
+      .mx-md-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+        margin-right: #{$space}rem !important;
+      }
+
+      .my-md-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+        margin-bottom: #{$space}rem !important;
+
+      }
+
+      .ml-md-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+      }
+
+      .mr-md-#{$spaceName} {
+        margin-right: #{$space}rem !important;
+      }
+
+      .mb-md-#{$spaceName} {
+        margin-bottom: #{$space}rem !important;
+      }
+
+      .mt-md-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+      }
+
+      .p-md-#{$spaceName} {
+        padding: #{$space}rem !important;
+      }
+
+      .px-md-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+        padding-right: #{$space}rem !important;
+      }
+
+      .py-md-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+        padding-bottom: #{$space}rem !important;
+
+      }
+
+      .pl-md-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+      }
+
+      .pr-md-#{$spaceName} {
+        padding-right: #{$space}rem !important;
+      }
+
+      .pb-md-#{$spaceName} {
+        padding-bottom: #{$space}rem !important;
+      }
+
+      .pt-md-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $port-sys-breakpoint-min-width-lg) {
+  @each $space in $spaceAmountsLG {
+    $spaceName: null;
+    @if (str-index(#{$space}, '.')) {
+      $spaceName: str-replace(#{$space}, '.', '');;
+    } @else {
+      $spaceName: #{$space};
+    }
+    @if $space==auto {
+      .m-lg-#{$spaceName} {
+        margin: #{$space} !important;
+      }
+
+      .mx-lg-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-lg-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-lg-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-lg-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-lg-#{$spaceName} {
+        margin-bottom: #{$space} !important;
+      }
+
+      .mt-lg-#{$spaceName} {
+        margin-top: #{$space} !important;
+      }
+    } @else {
+      .m-lg-#{$spaceName} {
+        margin: #{$space}rem !important;
+      }
+
+      .mx-lg-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+        margin-right: #{$space}rem !important;
+      }
+
+      .my-lg-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+        margin-bottom: #{$space}rem !important;
+
+      }
+
+      .ml-lg-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+      }
+
+      .mr-lg-#{$spaceName} {
+        margin-right: #{$space}rem !important;
+      }
+
+      .mb-lg-#{$spaceName} {
+        margin-bottom: #{$space}rem !important;
+      }
+
+      .mt-lg-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+      }
+
+      .p-lg-#{$spaceName} {
+        padding: #{$space}rem !important;
+      }
+
+      .px-lg-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+        padding-right: #{$space}rem !important;
+      }
+
+      .py-lg-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+        padding-bottom: #{$space}rem !important;
+
+      }
+
+      .pl-lg-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+      }
+
+      .pr-lg-#{$spaceName} {
+        padding-right: #{$space}rem !important;
+      }
+
+      .pb-lg-#{$spaceName} {
+        padding-bottom: #{$space}rem !important;
+      }
+
+      .pt-lg-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $port-sys-breakpoint-min-width-xl) {
+  @each $space in $spaceAmountsXL {
+    $spaceName: null;
+    @if (str-index(#{$space}, '.')) {
+      $spaceName: str-replace(#{$space}, '.', '');;
+    } @else {
+      $spaceName: #{$space};
+    }
+    @if $space==auto {
+      .m-xl-#{$spaceName} {
+        margin: #{$space} !important;
+      }
+
+      .mx-xl-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-xl-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-xl-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-xl-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-xl-#{$spaceName} {
+        margin-bottom: #{$space} !important;
+      }
+
+      .mt-xl-#{$spaceName} {
+        margin-top: #{$space} !important;
+      }
+    } @else {
+      .m-xl-#{$spaceName} {
+        margin: #{$space}rem !important;
+      }
+
+      .mx-xl-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+        margin-right: #{$space}rem !important;
+      }
+
+      .my-xl-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+        margin-bottom: #{$space}rem !important;
+
+      }
+
+      .ml-xl-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+      }
+
+      .mr-xl-#{$spaceName} {
+        margin-right: #{$space}rem !important;
+      }
+
+      .mb-xl-#{$spaceName} {
+        margin-bottom: #{$space}rem !important;
+      }
+
+      .mt-xl-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+      }
+
+      .p-xl-#{$spaceName} {
+        padding: #{$space}rem !important;
+      }
+
+      .px-xl-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+        padding-right: #{$space}rem !important;
+      }
+
+      .py-xl-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+        padding-bottom: #{$space}rem !important;
+
+      }
+
+      .pl-xl-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+      }
+
+      .pr-xl-#{$spaceName} {
+        padding-right: #{$space}rem !important;
+      }
+
+      .pb-xl-#{$spaceName} {
+        padding-bottom: #{$space}rem !important;
+      }
+
+      .pt-xl-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $port-sys-breakpoint-min-width-xxl) {
+  @each $space in $spaceAmountsXL {
+    $spaceName: null;
+    @if (str-index(#{$space}, '.')) {
+      $spaceName: str-replace(#{$space}, '.', '');;
+    } @else {
+      $spaceName: #{$space};
+    }
+    @if $space==auto {
+      .m-xxl-#{$spaceName} {
+        margin: #{$space} !important;
+      }
+
+      .mx-xxl-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-xxl-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-xxl-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-xxl-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-xxl-#{$spaceName} {
+        margin-bottom: #{$space} !important;
+      }
+
+      .mt-xxl-#{$spaceName} {
+        margin-top: #{$space} !important;
+      }
+    } @else {
+      .m-xxl-#{$spaceName} {
+        margin: #{$space}rem !important;
+      }
+
+      .mx-xxl-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+        margin-right: #{$space}rem !important;
+      }
+
+      .my-xxl-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+        margin-bottom: #{$space}rem !important;
+
+      }
+
+      .ml-xxl-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+      }
+
+      .mr-xxl-#{$spaceName} {
+        margin-right: #{$space}rem !important;
+      }
+
+      .mb-xxl-#{$spaceName} {
+        margin-bottom: #{$space}rem !important;
+      }
+
+      .mt-xxl-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+      }
+
+      .p-xxl-#{$spaceName} {
+        padding: #{$space}rem !important;
+      }
+
+      .px-xxl-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+        padding-right: #{$space}rem !important;
+      }
+
+      .py-xxl-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+        padding-bottom: #{$space}rem !important;
+
+      }
+
+      .pl-xxl-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+      }
+
+      .pr-xxl-#{$spaceName} {
+        padding-right: #{$space}rem !important;
+      }
+
+      .pb-xxl-#{$spaceName} {
+        padding-bottom: #{$space}rem !important;
+      }
+
+      .pt-xxl-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $port-sys-breakpoint-min-width-xxxl) {
+  @each $space in $spaceAmountsXL {
+    $spaceName: null;
+    @if (str-index(#{$space}, '.')) {
+      $spaceName: str-replace(#{$space}, '.', '');;
+    } @else {
+      $spaceName: #{$space};
+    }
+    @if $space==auto {
+      .m-xxxl-#{$spaceName} {
+        margin: #{$space} !important;
+      }
+
+      .mx-xxxl-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-xxxl-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-xxxl-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-xxxl-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-xxxl-#{$spaceName} {
+        margin-bottom: #{$space} !important;
+      }
+
+      .mt-xxxl-#{$spaceName} {
+        margin-top: #{$space} !important;
+      }
+    } @else {
+      .m-xxxl-#{$spaceName} {
+        margin: #{$space}rem !important;
+      }
+
+      .mx-xxxl-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+        margin-right: #{$space}rem !important;
+      }
+
+      .my-xxxl-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+        margin-bottom: #{$space}rem !important;
+
+      }
+
+      .ml-xxxl-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+      }
+
+      .mr-xxxl-#{$spaceName} {
+        margin-right: #{$space}rem !important;
+      }
+
+      .mb-xxxl-#{$spaceName} {
+        margin-bottom: #{$space}rem !important;
+      }
+
+      .mt-xxxl-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+      }
+
+      .p-xxxl-#{$spaceName} {
+        padding: #{$space}rem !important;
+      }
+
+      .px-xxxl-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+        padding-right: #{$space}rem !important;
+      }
+
+      .py-xxxl-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+        padding-bottom: #{$space}rem !important;
+
+      }
+
+      .pl-xxxl-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+      }
+
+      .pr-xxxl-#{$spaceName} {
+        padding-right: #{$space}rem !important;
+      }
+
+      .pb-xxxl-#{$spaceName} {
+        padding-bottom: #{$space}rem !important;
+      }
+
+      .pt-xxxl-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $port-sys-breakpoint-min-width-x4k) {
+  @each $space in $spaceAmountsXL {
+    $spaceName: null;
+    @if (str-index(#{$space}, '.')) {
+      $spaceName: str-replace(#{$space}, '.', '');;
+    } @else {
+      $spaceName: #{$space};
+    }
+    @if $space==auto {
+      .m-x4k-#{$spaceName} {
+        margin: #{$space} !important;
+      }
+
+      .mx-x4k-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-x4k-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-x4k-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-x4k-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-x4k-#{$spaceName} {
+        margin-bottom: #{$space} !important;
+      }
+
+      .mt-x4k-#{$spaceName} {
+        margin-top: #{$space} !important;
+      }
+    } @else {
+      .m-x4k-#{$spaceName} {
+        margin: #{$space}rem !important;
+      }
+
+      .mx-x4k-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+        margin-right: #{$space}rem !important;
+      }
+
+      .my-x4k-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+        margin-bottom: #{$space}rem !important;
+
+      }
+
+      .ml-x4k-#{$spaceName} {
+        margin-left: #{$space}rem !important;
+      }
+
+      .mr-x4k-#{$spaceName} {
+        margin-right: #{$space}rem !important;
+      }
+
+      .mb-x4k-#{$spaceName} {
+        margin-bottom: #{$space}rem !important;
+      }
+
+      .mt-x4k-#{$spaceName} {
+        margin-top: #{$space}rem !important;
+      }
+
+      .p-x4k-#{$spaceName} {
+        padding: #{$space}rem !important;
+      }
+
+      .px-x4k-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+        padding-right: #{$space}rem !important;
+      }
+
+      .py-x4k-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+        padding-bottom: #{$space}rem !important;
+
+      }
+
+      .pl-x4k-#{$spaceName} {
+        padding-left: #{$space}rem !important;
+      }
+
+      .pr-x4k-#{$spaceName} {
+        padding-right: #{$space}rem !important;
+      }
+
+      .pb-x4k-#{$spaceName} {
+        padding-bottom: #{$space}rem !important;
+      }
+
+      .pt-x4k-#{$spaceName} {
+        padding-top: #{$space}rem !important;
+      }
+    }
+  }
+}

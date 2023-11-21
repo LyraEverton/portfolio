@@ -1,81 +1,98 @@
-@import "src/styles/variables";
+@import "../../styles/styles";
 
-.header {
-  margin-top: 40px;
-  text-align: center;
-  position: relative;
 
-  .me {
-    position: absolute;
-    left: 108px;
-    top: 50%;
-    transform: translateY(-50%);
+@include breakpoint-sm {
+}
 
-    &__name {
-      display: block;
-      color: $fontColor-4;
-      font-size: $fontSize-2;
-      font-weight: $fontWeight-2;
-      line-height: 20px;
-      letter-spacing: 0.3857142925262451px;
-      text-align: left;
+@include breakpoint-md {
+}
+
+@include breakpoint-lg {
+  .header {
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+
+    .me {
+      position: absolute;
+      left: 108px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &__name {
+        display: block;
+        color: $port-sys-font-color-4;
+        font-size: $port-sys-font-size-2;
+        font-weight: $port-sys-font-weight-2;
+        line-height: 20px;
+        letter-spacing: 0.3857142925262451px;
+        text-align: left;
+      }
+
+      &__role {
+        display: block;
+        color: $port-sys-font-color-3;
+        font-size: $port-sys-font-size-1;
+        font-weight: $port-sys-font-weight-1;
+        line-height: 18px;
+        letter-spacing: 0.3857142925262451px;
+        text-align: left;
+      }
     }
 
-    &__role {
-      display: block;
-      color: $fontColor-3;
-      font-size: $fontSize-1;
-      font-weight: $fontWeight-1;
-      line-height: 18px;
-      letter-spacing: 0.3857142925262451px;
-      text-align: left;
-    }
-  }
+    .navbar {
+      font-family: 'Inter', sans-serif;
+      background-color: $port-sys-background-color-secondary;
+      border-radius: 50px;
+      display: flex;
+      height: 80px;
+      width: 600px;
+      margin: 0 auto;
+      justify-content: space-between;
+      align-items: center;
 
-  .navbar {
-    font-family: 'Inter', sans-serif;
-    background-color: $secondary-color;
-    border-radius: 50px;
-    display: flex;
-    height: 80px;
-    width: 600px;
-    margin: 0 auto;
-    padding: 10px;
-    justify-content: space-between;
-    align-items: center;
+      &__link {
+        display: flex;
+        font-size: $port-sys-font-size-4;
+        text-decoration: none;
+        color: $port-sys-font-color-4;
+        justify-content: center;
+        align-items: center;
 
-    &__link {
-      font-size: $fontSize-4;
-      text-decoration: none;
-      padding: 16px 20px;
-      color: $fontColor-4;
+        &__active {
+          background-color: $port-sys-btn-color-2;
+          color: white;
+          height: 60px;
+          border-radius: 60px;
+          line-height: 24px;
+          letter-spacing: -0.015em;
 
-      &__active {
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-        background-color: $btnColor-2;
-        color: white;
-        height: 60px;
-        padding: 18px 40px;
-        border-radius: 60px;
-        text-align: center;
-        gap: 10px;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: -0.015em;
+          &__home {
+            margin-left: 10px;
+            width: 135px;
+          }
 
-        &__cases {
-          width: 202px;
+          &__cases {
+            width: 202px;
+          }
+
+          &__about {
+            width: 136px;
+          }
+
+          &__getInTouch {
+            width: 194px;
+            margin-right: 10px;
+          }
         }
+      }
 
-        &__about {
-          width: 136px;
-        }
+      &__link:first-child:not(.navbar__link__active) {
+        margin-left: 26px;
+      }
 
-        &__getInTouch {
-          width: 194px;
-          flex-wrap: initial;
-        }
+      &__link:last-child:not(.navbar__link__active) {
+        margin-right: 26px;
       }
     }
   }
