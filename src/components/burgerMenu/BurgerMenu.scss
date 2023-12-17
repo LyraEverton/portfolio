@@ -1,0 +1,19 @@
+@import "../../styles/utilities/variables";
+.menu-btn {
+  border: none;
+  cursor: pointer;
+  display: flex;
+  background: $port-sys-background-color-primary;
+}
+
+.burgerIcon {
+  cursor: pointer;
+  z-index: 1;
+  overflow: visible;
+  scale: 1.2;
+}
+
+.burgerIcon > rect {
+  transform-origin: center;
+  transform-box: fill-box;
+}

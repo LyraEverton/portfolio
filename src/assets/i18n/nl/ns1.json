@@ -1,0 +1,28 @@
+{
+  "title": "Portfolio - Everton Lyra",
+  "generic": {
+    "getInTouch": "Get in touch",
+    "copiedSuccessfully": "Copied Successfully !",
+    "email": "everton@evertonlyra.com",
+    "phone": "+351 915-704-389",
+    "thankYou": "Thank you!"
+  },
+  "navbar": {
+    "name": "Everton Lyra",
+    "role": "Front-End Developer",
+    "menu": "Menu",
+    "home": "Home",
+    "caseStudies": "Case studies",
+    "about": "About",
+    "social": "Social",
+    "twitter": "TW.",
+    "linkedin": "IN.",
+    "facebook": "FB."
+  },
+  "footer": {
+    "whatsNext1": "What’s next? Feel free to reach out",
+    "whatsNext2": "to me if you're looking for a",
+    "whatsNext3": "developer, have a query, or simply",
+    "whatsNext4": "want to connect."
+  }
+}

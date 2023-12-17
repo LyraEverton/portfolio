@@ -1,98 +1,241 @@
 @import "../../styles/styles";
 
-
-@include breakpoint-sm {
-}
-
-@include breakpoint-md {
-}
-
-@include breakpoint-lg {
-  .header {
-    margin-top: 40px;
-    text-align: center;
+.navbar {
+  &__me {
+    display: flex;
     position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px;
+    z-index: 1;
 
-    .me {
+    &__name {
+      display: block;
+      color: $port-sys-font-color-4;
+      font-size: $port-sys-font-size-2;
+      font-weight: $port-sys-font-weight-2;
+      line-height: 20px;
+      letter-spacing: 0.3857142925262451px;
+      text-align: left;
+    }
+
+    &__role {
+      display: block;
+      color: $port-sys-font-color-3;
+      font-size: $port-sys-font-size-1;
+      font-weight: $port-sys-font-weight-1;
+      line-height: 18px;
+      letter-spacing: 0.3857142925262451px;
+      text-align: left;
+    }
+
+    &__menu {
+      font-family: $port-sys-font-family-secondary;
+      color: $port-sys-font-color-1;
+      font-size: $port-sys-font-size-5;
+      font-weight: $port-sys-font-weight-2;
+      line-height: 29.05px;
+      text-align: left;
+    }
+  }
+
+  &__header {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: $port-sys-background-color-primary;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    display: none;
+
+    &__navLinks {
       position: absolute;
-      left: 108px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
 
-      &__name {
+      &__link {
         display: block;
         color: $port-sys-font-color-4;
-        font-size: $port-sys-font-size-2;
-        font-weight: $port-sys-font-weight-2;
-        line-height: 20px;
-        letter-spacing: 0.3857142925262451px;
-        text-align: left;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: $port-sys-font-size-5;
+        padding: 5px 50px;
+        line-height: 50px;
       }
 
-      &__role {
-        display: block;
-        color: $port-sys-font-color-3;
-        font-size: $port-sys-font-size-1;
-        font-weight: $port-sys-font-weight-1;
-        line-height: 18px;
-        letter-spacing: 0.3857142925262451px;
-        text-align: left;
+      &__link:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: $port-sys-font-color-4;
+        border-radius: 50px;
+        transform: scaleY(0);
+        z-index: -1;
+        transition: transform 0.3s ease;
+      }
+
+      &__link:hover:after {
+        transform: scaleY(1);
+      }
+
+      &__link:hover {
+        color: $port-sys-font-color-2;
       }
     }
 
-    .navbar {
-      font-family: 'Inter', sans-serif;
-      background-color: $port-sys-background-color-secondary;
-      border-radius: 50px;
-      display: flex;
-      height: 80px;
-      width: 600px;
-      margin: 0 auto;
-      justify-content: space-between;
-      align-items: center;
+    &__socials {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
 
-      &__link {
-        display: flex;
-        font-size: $port-sys-font-size-4;
+      &__social {
+        font-family: $port-sys-font-family-secondary;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      &__twitter, &__linkedin, &__facebook {
         text-decoration: none;
-        color: $port-sys-font-color-4;
-        justify-content: center;
+        font-family: $port-sys-font-family-3;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 6.331428050994873px;
+        text-align: left;
+      }
+
+      &__twitter:visited, &__linkedin:visited, &__facebook:visited {
+        color: black;
+      }
+
+      &__twitter:hover, &__linkedin:hover, &__facebook:hover {
+        text-decoration: underline 2px;
+      }
+
+
+      &__twitter {
+        margin-right: 45px;
+      }
+
+      &__facebook {
+        margin-left: 45px;
+      }
+    }
+
+    &__socials > span:first-child {
+      display: block;
+    }
+
+  }
+
+  .active {
+    clip-path: circle(75%);
+    display: block;
+    transition: all 0.3s ease;
+  }
+}
+
+
+@include breakpoint-lg {
+  .navbar {
+    position: absolute;
+    top: 40px;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+
+    &__me {
+      position: absolute;
+      left: 108px;
+    }
+
+    &__header {
+      position: absolute;
+      clip-path: none;
+      display: block;
+
+      &__navLinks {
+        position: static;
+        top: unset;
+        left: unset;
+        transform: none;
+
+        font-family: $port-sys-font-family-secondary;
+        background-color: $port-sys-background-color-secondary;
+        border-radius: 50px;
+        display: flex;
+        height: 80px;
+        width: 600px;
+        margin: 0 auto;
+        justify-content: space-between;
         align-items: center;
 
-        &__active {
-          background-color: $port-sys-btn-color-2;
-          color: white;
-          height: 60px;
-          border-radius: 60px;
-          line-height: 24px;
-          letter-spacing: -0.015em;
+        &__link {
+          display: flex;
+          font-size: $port-sys-font-size-4;
+          text-decoration: none;
+          color: $port-sys-font-color-4;
+          justify-content: center;
+          align-items: center;
+          transition: none;
+          padding: unset;
+          line-height: unset;
+          margin: unset;
 
-          &__home {
-            margin-left: 10px;
-            width: 135px;
-          }
+          &__active {
+            background-color: $port-sys-btn-color-2;
+            color: $port-sys-font-color-2;
+            height: 60px;
+            border-radius: 60px;
+            line-height: 24px;
+            letter-spacing: -0.015em;
 
-          &__cases {
-            width: 202px;
-          }
+            &__home {
+              margin-left: 10px;
+              width: 135px;
+            }
 
-          &__about {
-            width: 136px;
-          }
+            &__cases {
+              width: 202px;
+            }
 
-          &__getInTouch {
-            width: 194px;
-            margin-right: 10px;
+            &__about {
+              width: 136px;
+            }
+
+            &__getInTouch {
+              width: 194px;
+              margin-right: 10px;
+            }
           }
         }
-      }
 
-      &__link:first-child:not(.navbar__link__active) {
-        margin-left: 26px;
-      }
+        &__link:hover {
+          color: $port-sys-font-color-2;
+        }
 
-      &__link:last-child:not(.navbar__link__active) {
-        margin-right: 26px;
+        &__link:hover:not(.navbar__header__navLinks__link__active) {
+          color: $port-sys-font-color-4;
+        }
+
+        &__link:first-child:not(.navbar__header__navLinks__link__active) {
+          margin-left: 26px;
+        }
+
+        &__link:last-child:not(.navbar__header__navLinks__link__active) {
+          margin-right: 26px;
+        }
       }
     }
   }

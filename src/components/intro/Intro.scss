@@ -1,0 +1,81 @@
+@import "../../styles/styles";
+
+.introduction {
+  background-color: $port-sys-background-color-secondary;
+  height: 330px;
+
+  &__name {
+    font-size: $port-sys-font-size-7;
+    font-weight: $port-sys-font-weight-2;
+    line-height: 51px;
+    letter-spacing: 0;
+
+  }
+
+  &__aboutMe {
+    font-family: $port-sys-font-family-secondary;
+    font-size: $port-sys-font-size-2;
+    font-weight: $port-sys-font-weight-1;
+    line-height: 24px;
+    letter-spacing: 0.3857142925262451px;
+
+    &__socials {
+
+      &__twitter, &__linkedin, &__facebook {
+        text-decoration: none;
+        font-family: $port-sys-font-family-3;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 6.331428050994873px;
+        text-align: left;
+      }
+
+      &__twitter:visited, &__linkedin:visited, &__facebook:visited {
+        color: black;
+      }
+
+      &__twitter:hover, &__linkedin:hover, &__facebook:hover {
+        text-decoration: underline 2px;
+      }
+
+
+      &__twitter {
+        margin-right: 45px;
+      }
+
+      &__facebook {
+        margin-left: 45px;
+      }
+    }
+  }
+
+  &__scrollProjects {
+    margin: 0 auto;
+    width: 58.43px;
+    height: 126px;
+    border-radius: 1000px;
+    border: 1.5px solid #7390F9;
+
+    &__longArrow {
+      display: block;
+      margin: 25px auto;
+      width: 10px;
+      height: 10px;
+      border-top: 1px solid #7390F9;
+      border-left: 1px solid #7390F9;
+      transform: rotate(225deg);
+    }
+
+    &__longArrow::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 25px;
+      background-color: #7390F9;
+      transform: rotate(-45deg) translate(8.5px, 4px);
+    }
+
+  }
+
+}

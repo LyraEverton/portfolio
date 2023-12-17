@@ -23,6 +23,8 @@
 //Font Family
 $port-sys-font-family-primary: 'Space Grotesk', sans-serif;
 $port-sys-font-family-secondary: 'Inter', sans-serif;
+$port-sys-font-family-3: 'Poppins', sans-serif;
+
 
 //Background Colors
 $port-sys-background-color-primary: #FFFFFF;
@@ -55,20 +57,23 @@ $port-sys-font-color-5: #A1A1A1;
 $port-sys-font-color-6: #B2B2B2;
 
 //Font Sizes
+$port-sys-font-size: 0.75rem;
 $port-sys-font-size-1: 0.875rem;
 $port-sys-font-size-2: 1rem;
 $port-sys-font-size-3: 1.125rem;
 $port-sys-font-size-4: 1.25rem;
-$port-sys-font-size-5: 2.25rem;
-$port-sys-font-size-6: 3rem;
-$port-sys-font-size-7: 6.25rem;
+$port-sys-font-size-5: 1.50em;
+$port-sys-font-size-6: 2.25rem;
+$port-sys-font-size-7: 2.5rem;
+$port-sys-font-size-8: 3rem;
+$port-sys-font-size-9: 6.25rem;
 
 //Font Weight
 $port-sys-font-weight-1: 400;
 $port-sys-font-weight-2: 700;
+$port-sys-font-weight-3: 600;
 
 //Breakpoints
-$port-sys-breakpoint-max-width: 40em;
 $port-sys-breakpoint-min-width-sm: 35.5em;
 $port-sys-breakpoint-min-width-md: 48em;
 $port-sys-breakpoint-min-width-lg: 64em;

@@ -6,6 +6,10 @@ import {Home} from "./pages/Home";
 import {Cases} from "./pages/Cases";
 import {About} from "./pages/About";
 import {GetInTouch} from "./pages/GetInTouch";
+import {Footer} from "./components/footer/Footer";
+import './i18n';
+import {Intro} from "./components/intro/Intro";
+import {LatestProjects} from "./components/latestProjects/LatestProjects";
 
 function App() {
     return (
@@ -20,6 +24,9 @@ function App() {
                         <Route path={"/get-in-touch"} element={<GetInTouch/>}></Route>
                     </Routes>
                 </Router>
+                <Intro/>
+                <LatestProjects/>
+                <Footer/>
             </div>
         </div>
     );

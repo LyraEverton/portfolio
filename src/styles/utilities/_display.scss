@@ -3,14 +3,14 @@ $displayProps: ("block", "inline-block", "inline", "flex", "grid", "inline-flex"
 
 @each $dsp in $displayProps {
   .d-#{$dsp} {
-    display: #{$dsp};
+    display: #{$dsp} !important;
   }
 }
 
 @media screen and (min-width: $port-sys-breakpoint-min-width-sm){
   @each $dsp in $displayProps {
     .d-sm-#{$dsp} {
-      display: #{$dsp};
+      display: #{$dsp} !important;
     }
   }
 }
@@ -18,7 +18,7 @@ $displayProps: ("block", "inline-block", "inline", "flex", "grid", "inline-flex"
 @media screen and (min-width: $port-sys-breakpoint-min-width-md){
   @each $dsp in $displayProps {
     .d-md-#{$dsp} {
-      display: #{$dsp};
+      display: #{$dsp} !important;
     }
   }
 }
@@ -26,7 +26,7 @@ $displayProps: ("block", "inline-block", "inline", "flex", "grid", "inline-flex"
 @media screen and (min-width: $port-sys-breakpoint-min-width-lg){
   @each $dsp in $displayProps {
     .d-lg-#{$dsp} {
-      display: #{$dsp};
+      display: #{$dsp} !important;
     }
   }
 }
@@ -34,7 +34,7 @@ $displayProps: ("block", "inline-block", "inline", "flex", "grid", "inline-flex"
 @media screen and (min-width: $port-sys-breakpoint-min-width-xl) {
   @each $dsp in $displayProps {
     .d-xl-#{$dsp} {
-      display: #{$dsp};
+      display: #{$dsp} !important;
     }
   }
 }

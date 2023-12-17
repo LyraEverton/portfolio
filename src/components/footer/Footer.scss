@@ -1,0 +1,97 @@
+@import "../../styles/styles";
+
+.toast-message {
+  background: $port-sys-font-color-2;
+  color: $port-sys-font-color-3;
+  font-size: $port-sys-font-size-2;
+  font-family: $port-sys-font-family-secondary;
+}
+
+.footer {
+  background-color: $port-sys-background-color-secondary;
+
+  &__getInTouch {
+    font-size: $port-sys-font-size-5;
+    font-weight: $port-sys-font-weight-2;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+
+  &__whatsNext {
+    color: $port-sys-font-color-3;
+    font-family: $port-sys-font-family-secondary;
+    font-size: $port-sys-font-size-2;
+    font-weight: $port-sys-font-weight-1;
+    line-height: 18px;
+    letter-spacing: 0;
+  }
+
+  &__contacts {
+    font-family: $port-sys-font-family-secondary;
+    font-size: $port-sys-font-size-2;
+    font-weight: $port-sys-font-weight-3;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+
+    &__email > svg:first-child, &__phone > svg:first-child {
+      margin-right: 8px;
+    }
+
+    &__email > span > svg:last-child, &__phone > span > svg:last-child {
+      margin-left: 8px;
+    }
+
+    &__phone, &__email {
+      &__copy {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__thankYou {
+    color: $port-sys-font-color-3;
+    font-family: $port-sys-font-family-secondary;
+    font-size: $port-sys-font-size;
+    font-weight: $port-sys-font-weight-1;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+}
+
+@include breakpoint-md {
+  .footer {
+    &__getInTouch {
+      font-size: $port-sys-font-size-8;
+      line-height: $port-sys-font-size-8;
+      letter-spacing: -0.015em;
+    }
+
+    &__whatsNext {
+      font-size: $port-sys-font-size-4;
+      line-height: 28px;
+    }
+
+    &__contacts {
+      font-size: $port-sys-font-size-6;
+
+      &__email > svg:first-child, &__phone > svg:first-child {
+        margin-right: 8px;
+      }
+
+      &__email > span > svg:last-child, &__phone > span > svg:last-child {
+        margin-left: 8px;
+      }
+
+      &__phone, &__email {
+        &__copy {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__thankYou {
+      font-size: $port-sys-font-size-2;
+      font-weight: $port-sys-font-weight-1;
+    }
+  }
+}
