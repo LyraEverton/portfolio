@@ -46,6 +46,7 @@
     background: $port-sys-background-color-primary;
     clip-path: circle(25px at calc(100% - 45px) 45px);
     display: none;
+    z-index: 2;
 
     &__navLinks {
       position: absolute;
@@ -161,6 +162,7 @@
     }
 
     &__header {
+      background: $port-sys-background-color-secondary; //RECHECK BETWEEN PAGES
       position: absolute;
       clip-path: none;
       display: block;
@@ -172,7 +174,7 @@
         transform: none;
 
         font-family: $port-sys-font-family-secondary;
-        background-color: $port-sys-background-color-secondary;
+        background-color: $port-sys-background-color-primary; //RECHECK BETWEEN PAGES
         border-radius: 50px;
         display: flex;
         height: 80px;
@@ -219,6 +221,10 @@
               margin-right: 10px;
             }
           }
+        }
+
+        &__link:hover:after {
+          transform: scaleY(0);
         }
 
         &__link:hover {

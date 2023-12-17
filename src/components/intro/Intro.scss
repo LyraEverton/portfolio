@@ -2,7 +2,10 @@
 
 .introduction {
   background-color: $port-sys-background-color-secondary;
-  height: 330px;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 
   &__name {
     font-size: $port-sys-font-size-7;
@@ -16,6 +19,7 @@
     font-family: $port-sys-font-family-secondary;
     font-size: $port-sys-font-size-2;
     font-weight: $port-sys-font-weight-1;
+    color: $port-sys-font-color-3;
     line-height: 24px;
     letter-spacing: 0.3857142925262451px;
 
@@ -56,6 +60,9 @@
     height: 126px;
     border-radius: 1000px;
     border: 1.5px solid #7390F9;
+    position: relative;
+    top: 50px;
+    cursor: pointer;
 
     &__longArrow {
       display: block;
@@ -79,3 +86,87 @@
   }
 
 }
+
+@include breakpoint-md {
+  .introduction {
+    &__name {
+      font-size: $port-sys-font-size-8;
+      letter-spacing: -2px;
+      flex: 1;
+    }
+
+    &__verticalLine {
+      height: auto;
+      margin: 0;
+    }
+
+    &__aboutMe {
+      font-family: $port-sys-font-family-secondary;
+      font-size: $port-sys-font-size-4;
+      font-weight: $port-sys-font-weight-1;
+      line-height: 24px;
+      letter-spacing: 0.3857142925262451px;
+      flex: 2;
+
+    }
+  }
+}
+
+@include breakpoint-lg {
+  .introduction {
+    &__name {
+      &__div{
+        width: 100%;
+      }
+      max-width: 60%;
+      font-size: $port-sys-font-size-9;
+      line-height: 128px;
+      letter-spacing: 0px;
+    }
+
+    &__aboutMe {
+      font-size: $port-sys-font-size-4;
+      line-height: 36px;
+      max-width: 40%;
+
+    }
+    &__scrollProjects {
+      width: 115px;
+      height: 248px;
+      top: 120px;
+
+      &__longArrow {
+        margin: 40px auto;
+        width: 20px;
+        height: 20px;
+        border-top: 1px solid #7390F9;
+        border-left: 1px solid #7390F9;
+        transform: rotate(225deg);
+      }
+
+      &__longArrow::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 45px;
+        background-color: #7390F9;
+        transform: rotate(-45deg) translate(15.5px, 6.6px);
+      }
+
+    }
+  }
+}
+
+/*
+@include breakpoint-xxl {
+  .introduction {
+    &__name {
+      max-width: 50%;
+    }
+
+    &__aboutMe {
+      max-width: 50%;
+
+    }
+  }
+}*/

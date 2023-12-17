@@ -3,7 +3,7 @@
 $spaceAmounts: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 $spaceAmountsSM: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 $spaceAmountsMD: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
-$spaceAmountsLG: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
+$spaceAmountsLG: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, 16, auto);
 $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 
 @function str-replace($string, $search, $replace: '') {
