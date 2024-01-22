@@ -19,6 +19,18 @@
     "linkedin": "IN.",
     "facebook": "FB."
   },
+  "intro": {
+    "hello": "Hello",
+    "imName": "I´m Everton",
+    "intro": "A Portugal based frontend developer, working and living in OPorto. I love to work on anything code, from designing simple HTML pages to solving complex problems."
+  },
+  "latestProjects": {
+    "latestProjects": "Latest Projects",
+    "checkAllProjects": "Check all projects",
+    "project" : {
+      "readCaseStudy": "Read case study"
+    }
+  },
   "footer": {
     "whatsNext1": "What’s next? Feel free to reach out",
     "whatsNext2": "to me if you're looking for a",

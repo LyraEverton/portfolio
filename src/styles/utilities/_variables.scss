@@ -57,30 +57,37 @@ $port-sys-font-color-5: #A1A1A1;
 $port-sys-font-color-6: #B2B2B2;
 
 //Font Sizes
-$port-sys-font-size: 0.75rem;
-$port-sys-font-size-1: 0.875rem;
-$port-sys-font-size-2: 1rem;
-$port-sys-font-size-3: 1.125rem;
-$port-sys-font-size-4: 1.25rem;
-$port-sys-font-size-5: 1.50em;
-$port-sys-font-size-6: 2.25rem;
-$port-sys-font-size-7: 2.5rem;
-$port-sys-font-size-8: 3rem;
-$port-sys-font-size-9: 6.25rem;
+$port-sys-font-size: 0.75rem; //12px
+$port-sys-font-size-1: 0.875rem; //14px
+$port-sys-font-size-2: 1rem; //16px
+$port-sys-font-size-3: 1.125rem; //18px
+$port-sys-font-size-4: 1.25rem; //20px
+$port-sys-font-size-5: 1.50em; //24px
+$port-sys-font-size-10: 2rem; //32px
+$port-sys-font-size-6: 2.25rem; //36px
+$port-sys-font-size-7: 2.5rem; //40px
+$port-sys-font-size-8: 3rem; //48px
+$port-sys-font-size-9: 6.25rem; //100px
 
+
+//Font Sizes
+$port-sys-line-height: 1.25rem; //20px
+$port-sys-line-height-1: 1.50rem; //24px
+$port-sys-line-height-2: 2.2rem; //35px
 //Font Weight
 $port-sys-font-weight-1: 400;
 $port-sys-font-weight-2: 700;
 $port-sys-font-weight-3: 600;
+$port-sys-font-weight-4: 500;
 
 //Breakpoints
-$port-sys-breakpoint-min-width-sm: 35.5em;
-$port-sys-breakpoint-min-width-md: 48em;
-$port-sys-breakpoint-min-width-lg: 64em;
-$port-sys-breakpoint-min-width-xl: 80em;
-$port-sys-breakpoint-min-width-xxl: 120em;
-$port-sys-breakpoint-min-width-xxxl: 160em;
-$port-sys-breakpoint-min-width-x4k: 240em;
+$port-sys-breakpoint-min-width-sm: 35.5em; //568px
+$port-sys-breakpoint-min-width-md: 48em; //768px
+$port-sys-breakpoint-min-width-lg: 64em; //1024px
+$port-sys-breakpoint-min-width-xl: 80em; //1280px
+$port-sys-breakpoint-min-width-xxl: 120em; //1920px
+$port-sys-breakpoint-min-width-xxxl: 160em; //2560px
+$port-sys-breakpoint-min-width-x4k: 240em; //3840px
 
 //Container
 $port-comp-container-max-width: 100%;

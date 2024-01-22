@@ -9,7 +9,7 @@ export const Navbar = () => {
     return (
         <div className={"navbar"}>
             <div className="navbar__me">
-                <div className={isOpen ? "d-none d-lg-block" : "d-block"}>
+                <div className={isOpen ? "d-none d-lg-block" : ""}>
                     <span className="navbar__me__name">{i18next.t('ns1:navbar.name')}</span>
                     <span className="navbar__me__role">{i18next.t('ns1:navbar.role')}</span>
                 </div>

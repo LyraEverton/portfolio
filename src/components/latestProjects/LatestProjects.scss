@@ -2,11 +2,70 @@
 
 .latestProjects {
   background: $port-sys-background-color-secondary;
-  height: 300px;
 
   &__content {
     background: $port-sys-background-color-primary;
-    height: 300px;
     border-radius: 32px 32px 0 0;
+
+    &__title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0;
+    }
+    &__cards{
+      min-width: 100%;
+      flex-wrap:wrap;
+    }
+
+    &__button {
+      border: none;
+      height: 52.17px;
+      padding: 16px 24px;
+      border-radius: 16px;
+      gap: 10px;
+      background: $port-sys-btn-color-1;
+      color: $port-sys-background-color-primary;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0;
+      margin: 0 auto;
+      cursor: pointer;
+
+      &__longArrow {
+        margin-left: 7px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid $port-sys-btn-color-3;
+        border-left: 1px solid $port-sys-btn-color-3;
+        transform: rotate(90deg);
+      }
+
+      &__longArrow::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 14px;
+        background-color: $port-sys-btn-color-3;
+        transform: rotate(-45deg) translate(4.5px, 1px);
+      }
+    }
+  }
+}
+
+@include breakpoint-md {
+  .latestProjects {
+
+    &__content {
+      padding: 0 108px;
+      &__title{
+        font-size: 48px;
+      }
+      &__button {
+        margin: unset;
+      }
+    }
   }
 }
