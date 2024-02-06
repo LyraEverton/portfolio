@@ -1,10 +1,6 @@
 @import 'variables';
 
-$spaceAmounts: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
-$spaceAmountsSM: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
-$spaceAmountsMD: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
-$spaceAmountsLG: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, 16, auto);
-$spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
+$spaceAmounts: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 6, 16, auto, unset);
 
 @function str-replace($string, $search, $replace: '') {
   $index: str-index($string, $search);
@@ -53,6 +49,83 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 
     .mt-#{$spaceName} {
       margin-top: #{$space} !important;
+    }
+    .p-#{$spaceName} {
+      padding: #{$space} !important;
+    }
+    .px-#{$spaceName} {
+      padding-left: #{$space} !important;
+      padding-right: #{$space} !important;
+    }
+    .py-#{$spaceName} {
+      padding-top: #{$space} !important;
+      padding-bottom: #{$space} !important;
+    }
+    .pl-#{$spaceName} {
+      padding-left: #{$space} !important;
+    }
+    .pr-#{$spaceName} {
+      padding-right: #{$space} !important;
+    }
+    .pb-#{$spaceName} {
+      padding-bottom: #{$space} !important;
+    }
+    .pt-#{$spaceName} {
+      padding-top: #{$space} !important;
+    }
+  } @else if $space==unset {
+    .m-#{$spaceName} {
+      margin: #{$space} !important;
+    }
+
+    .mx-#{$spaceName} {
+      margin-left: #{$space} !important;
+      margin-right: #{$space} !important;
+    }
+
+    .my-#{$spaceName} {
+      margin-top: #{$space} !important;
+      margin-bottom: #{$space} !important;
+
+    }
+
+    .ml-#{$spaceName} {
+      margin-left: #{$space} !important;
+    }
+
+    .mr-#{$spaceName} {
+      margin-right: #{$space} !important;
+    }
+
+    .mb-#{$spaceName} {
+      margin-bottom: #{$space} !important;
+    }
+
+    .mt-#{$spaceName} {
+      margin-top: #{$space} !important;
+    }
+    .p-#{$spaceName} {
+      padding: #{$space} !important;
+    }
+    .px-#{$spaceName} {
+      padding-left: #{$space} !important;
+      padding-right: #{$space} !important;
+    }
+    .py-#{$spaceName} {
+      padding-top: #{$space} !important;
+      padding-bottom: #{$space} !important;
+    }
+    .pl-#{$spaceName} {
+      padding-left: #{$space} !important;
+    }
+    .pr-#{$spaceName} {
+      padding-right: #{$space} !important;
+    }
+    .pb-#{$spaceName} {
+      padding-bottom: #{$space} !important;
+    }
+    .pt-#{$spaceName} {
+      padding-top: #{$space} !important;
     }
   } @else {
     .m-#{$spaceName} {
@@ -120,7 +193,7 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 }
 
 @media screen and (min-width: $port-sys-breakpoint-min-width-sm) {
-  @each $space in $spaceAmountsSM {
+  @each $space in $spaceAmounts {
     $spaceName: null;
     @if (str-index(#{$space}, '.')) {
       $spaceName: str-replace(#{$space}, '.', '');;
@@ -157,6 +230,83 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 
       .mt-sm-#{$spaceName} {
         margin-top: #{$space} !important
+      }
+      .p-sm-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-sm-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-sm-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-sm-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-sm-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-sm-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-sm-#{$spaceName} {
+        padding-top: #{$space} !important;
+      }
+    } @else if $space==unset {
+      .m-sm-#{$spaceName} {
+        margin: #{$space} !important
+      }
+
+      .mx-sm-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-sm-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-sm-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-sm-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-sm-#{$spaceName} {
+        margin-bottom: #{$space} !important
+      }
+
+      .mt-sm-#{$spaceName} {
+        margin-top: #{$space} !important
+      }
+      .p-sm-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-sm-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-sm-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-sm-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-sm-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-sm-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-sm-#{$spaceName} {
+        padding-top: #{$space} !important;
       }
     } @else {
       .m-sm-#{$spaceName} {
@@ -225,7 +375,7 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 }
 
 @media screen and (min-width: $port-sys-breakpoint-min-width-md) {
-  @each $space in $spaceAmountsMD {
+  @each $space in $spaceAmounts {
     $spaceName: null;
     @if (str-index(#{$space}, '.')) {
       $spaceName: str-replace(#{$space}, '.', '');;
@@ -262,6 +412,83 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 
       .mt-md-#{$spaceName} {
         margin-top: #{$space} !important;
+      }
+      .p-md-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-md-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-md-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-md-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-md-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-md-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-md-#{$spaceName} {
+        padding-top: #{$space} !important;
+      }
+    } @else if $space==unset {
+      .m-md-#{$spaceName} {
+        margin: #{$space} !important;
+      }
+
+      .mx-md-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-md-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-md-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-md-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-md-#{$spaceName} {
+        margin-bottom: #{$space} !important;
+      }
+
+      .mt-md-#{$spaceName} {
+        margin-top: #{$space} !important;
+      }
+      .p-md-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-md-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-md-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-md-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-md-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-md-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-md-#{$spaceName} {
+        padding-top: #{$space} !important;
       }
     } @else {
       .m-md-#{$spaceName} {
@@ -330,7 +557,7 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 }
 
 @media screen and (min-width: $port-sys-breakpoint-min-width-lg) {
-  @each $space in $spaceAmountsLG {
+  @each $space in $spaceAmounts {
     $spaceName: null;
     @if (str-index(#{$space}, '.')) {
       $spaceName: str-replace(#{$space}, '.', '');;
@@ -367,6 +594,83 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 
       .mt-lg-#{$spaceName} {
         margin-top: #{$space} !important;
+      }
+      .p-lg-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-lg-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-lg-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-lg-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-lg-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-lg-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-lg-#{$spaceName} {
+        padding-top: #{$space} !important;
+      }
+    } @else if $space==unset {
+      .m-lg-#{$spaceName} {
+        margin: #{$space} !important;
+      }
+
+      .mx-lg-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-lg-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-lg-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-lg-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-lg-#{$spaceName} {
+        margin-bottom: #{$space} !important;
+      }
+
+      .mt-lg-#{$spaceName} {
+        margin-top: #{$space} !important;
+      }
+      .p-lg-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-lg-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-lg-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-lg-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-lg-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-lg-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-lg-#{$spaceName} {
+        padding-top: #{$space} !important;
       }
     } @else {
       .m-lg-#{$spaceName} {
@@ -435,7 +739,7 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 }
 
 @media screen and (min-width: $port-sys-breakpoint-min-width-xl) {
-  @each $space in $spaceAmountsXL {
+  @each $space in $spaceAmounts {
     $spaceName: null;
     @if (str-index(#{$space}, '.')) {
       $spaceName: str-replace(#{$space}, '.', '');;
@@ -472,6 +776,83 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 
       .mt-xl-#{$spaceName} {
         margin-top: #{$space} !important;
+      }
+      .p-xl-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-xl-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-xl-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-xl-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-xl-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-xl-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-xl-#{$spaceName} {
+        padding-top: #{$space} !important;
+      }
+    } @else if $space==unset {
+      .m-xl-#{$spaceName} {
+        margin: #{$space} !important;
+      }
+
+      .mx-xl-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-xl-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-xl-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-xl-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-xl-#{$spaceName} {
+        margin-bottom: #{$space} !important;
+      }
+
+      .mt-xl-#{$spaceName} {
+        margin-top: #{$space} !important;
+      }
+      .p-xl-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-xl-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-xl-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-xl-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-xl-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-xl-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-xl-#{$spaceName} {
+        padding-top: #{$space} !important;
       }
     } @else {
       .m-xl-#{$spaceName} {
@@ -540,7 +921,7 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 }
 
 @media screen and (min-width: $port-sys-breakpoint-min-width-xxl) {
-  @each $space in $spaceAmountsXL {
+  @each $space in $spaceAmounts {
     $spaceName: null;
     @if (str-index(#{$space}, '.')) {
       $spaceName: str-replace(#{$space}, '.', '');;
@@ -577,6 +958,83 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 
       .mt-xxl-#{$spaceName} {
         margin-top: #{$space} !important;
+      }
+      .p-xxl-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-xxl-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-xxl-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-xxl-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-xxl-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-xxl-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-xxl-#{$spaceName} {
+        padding-top: #{$space} !important;
+      }
+    } @else if $space==unset {
+      .m-xxl-#{$spaceName} {
+        margin: #{$space} !important;
+      }
+
+      .mx-xxl-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-xxl-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-xxl-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-xxl-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-xxl-#{$spaceName} {
+        margin-bottom: #{$space} !important;
+      }
+
+      .mt-xxl-#{$spaceName} {
+        margin-top: #{$space} !important;
+      }
+      .p-xxl-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-xxl-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-xxl-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-xxl-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-xxl-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-xxl-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-xxl-#{$spaceName} {
+        padding-top: #{$space} !important;
       }
     } @else {
       .m-xxl-#{$spaceName} {
@@ -645,7 +1103,7 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 }
 
 @media screen and (min-width: $port-sys-breakpoint-min-width-xxxl) {
-  @each $space in $spaceAmountsXL {
+  @each $space in $spaceAmounts {
     $spaceName: null;
     @if (str-index(#{$space}, '.')) {
       $spaceName: str-replace(#{$space}, '.', '');;
@@ -682,6 +1140,83 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 
       .mt-xxxl-#{$spaceName} {
         margin-top: #{$space} !important;
+      }
+      .p-xxxl-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-xxxl-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-xxxl-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-xxxl-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-xxxl-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-xxxl-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-xxxl-#{$spaceName} {
+        padding-top: #{$space} !important;
+      }
+    } @else if $space==unset {
+      .m-xxxl-#{$spaceName} {
+        margin: #{$space} !important;
+      }
+
+      .mx-xxxl-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-xxxl-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-xxxl-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-xxxl-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-xxxl-#{$spaceName} {
+        margin-bottom: #{$space} !important;
+      }
+
+      .mt-xxxl-#{$spaceName} {
+        margin-top: #{$space} !important;
+      }
+      .p-xxxl-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-xxxl-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-xxxl-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-xxxl-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-xxxl-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-xxxl-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-xxxl-#{$spaceName} {
+        padding-top: #{$space} !important;
       }
     } @else {
       .m-xxxl-#{$spaceName} {
@@ -750,7 +1285,7 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 }
 
 @media screen and (min-width: $port-sys-breakpoint-min-width-x4k) {
-  @each $space in $spaceAmountsXL {
+  @each $space in $spaceAmounts {
     $spaceName: null;
     @if (str-index(#{$space}, '.')) {
       $spaceName: str-replace(#{$space}, '.', '');;
@@ -787,6 +1322,83 @@ $spaceAmountsXL: (1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.0, auto);
 
       .mt-x4k-#{$spaceName} {
         margin-top: #{$space} !important;
+      }
+      .p-x4k-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-x4k-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-x4k-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-x4k-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-x4k-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-x4k-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-x4k-#{$spaceName} {
+        padding-top: #{$space} !important;
+      }
+    } @else if $space==unset {
+      .m-x4k-#{$spaceName} {
+        margin: #{$space} !important;
+      }
+
+      .mx-x4k-#{$spaceName} {
+        margin-left: #{$space} !important;
+        margin-right: #{$space} !important;
+      }
+
+      .my-x4k-#{$spaceName} {
+        margin-top: #{$space} !important;
+        margin-bottom: #{$space} !important;
+
+      }
+
+      .ml-x4k-#{$spaceName} {
+        margin-left: #{$space} !important;
+      }
+
+      .mr-x4k-#{$spaceName} {
+        margin-right: #{$space} !important;
+      }
+
+      .mb-x4k-#{$spaceName} {
+        margin-bottom: #{$space} !important;
+      }
+
+      .mt-x4k-#{$spaceName} {
+        margin-top: #{$space} !important;
+      }
+      .p-x4k-#{$spaceName} {
+        padding: #{$space} !important;
+      }
+      .px-x4k-#{$spaceName} {
+        padding-left: #{$space} !important;
+        padding-right: #{$space} !important;
+      }
+      .py-x4k-#{$spaceName} {
+        padding-top: #{$space} !important;
+        padding-bottom: #{$space} !important;
+      }
+      .pl-x4k-#{$spaceName} {
+        padding-left: #{$space} !important;
+      }
+      .pr-x4k-#{$spaceName} {
+        padding-right: #{$space} !important;
+      }
+      .pb-x4k-#{$spaceName} {
+        padding-bottom: #{$space} !important;
+      }
+      .pt-x4k-#{$spaceName} {
+        padding-top: #{$space} !important;
       }
     } @else {
       .m-x4k-#{$spaceName} {

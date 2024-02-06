@@ -13,7 +13,7 @@ export const Footer = () => {
         });
     };
     return (
-        <div className={"footer py-35 px-3"}>
+        <div className={"footer py-4 px-3"}>
             <span className={"footer__getInTouch text-center d-block"}>{i18next.t('ns1:generic.getInTouch')}</span>
             <span className={"footer__whatsNext mt-1 text-center d-block d-md-none"}>
                 <p>{i18next.t('ns1:footer.whatsNext1')}</p>

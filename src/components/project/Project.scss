@@ -1,17 +1,18 @@
 @import "../../styles/styles";
 
 .project {
-  min-height: 100%;
   position: relative;
   z-index: 0;
   flex: 0 1 auto;
   height: auto;
+  width: 100vw;
 
   &__card {
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     border-radius: 30px;
     position: relative;
     z-index: 1;
+    width: 100%;
   }
 
   &__content {
@@ -27,6 +28,11 @@
 
   }
 
+  &__techs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__techs > span {
     font-family: Inter, serif;
     font-size: $port-sys-font-size-1;
@@ -38,6 +44,8 @@
     border-radius: 100px;
     background: $port-sys-background-color-secondary;
     margin: 5px;
+    height: 28px;
+    width: auto;
 
   }
 
@@ -153,7 +161,7 @@
 
 @include breakpoint-lg {
   .project {
-    height: 558px;
+    height: 550px; //RECHECK
 
     &__card {
       height: 100%;
@@ -161,12 +169,17 @@
 
     &__content {
       flex-wrap: wrap;
+      flex-direction: column;
       width: 45%;
-      padding: 79px 0 79px 73px;
     }
 
     &__title {
       font-size: $port-sys-font-size-10;
+    }
+
+    &__techs{
+      display: flex;
+      height: auto;
     }
 
     &__description {
@@ -208,3 +221,11 @@
 
 
 }
+@include breakpoint-xl {
+  .project {
+    height: 650px; //RECHECK
+  }
+
+}
+
+

@@ -1,8 +1,9 @@
 import "./Project.scss";
 import styled from "@emotion/styled";
 import i18next from "i18next";
+import {ProjectsProps} from "../../interfaces/project";
 
-export const Project = (props: any) => {
+export const Project = (props: ProjectsProps) => {
     const size = props.project.size;
     const StyledProject = styled('div')`
       background: ${props.project.colors.primary};
@@ -21,14 +22,14 @@ export const Project = (props: any) => {
         return (
             <div className={"project mb-1 mb-md-25"}>
                 <StyledProject className={"project__card largeCard d-lg-flex"}>
-                    <div className={"project__content p-2 d-lg-flex"}>
-                        <div className={"project__title p-1"}>
+                    <div className={"project__content p-1 p-lg-2 p-xl-5 d-lg-flex"}>
+                        <div className={"project__title p-1 p-lg-auto pb-lg-2"}>
                             {props.project.title}
                         </div>
-                        <div className={"project__techs p-1"}>
+                        <div className={"project__techs px-1 pb-lg-2"}>
                             {props.project.techs.map((value: any, key: number) => <span key={key}>{value}</span>)}
                         </div>
-                        <div className={"project__description p-1"}>
+                        <div className={"project__description p-1 pt-lg-unset px-lg-1 pb-lg-2"}>
                             {props.project.description}
                         </div>
                         <div className={"project__viewMore d-flex items-center p-1"}>

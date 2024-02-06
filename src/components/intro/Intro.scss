@@ -69,18 +69,18 @@
       margin: 25px auto;
       width: 10px;
       height: 10px;
-      border-top: 1px solid #7390F9;
-      border-left: 1px solid #7390F9;
+      border-top: 1.3px solid #7390F9;
+      border-left: 1.3px solid #7390F9;
       transform: rotate(225deg);
     }
 
     &__longArrow::after {
       content: "";
       display: block;
-      width: 1px;
+      width: 1.3px;
       height: 25px;
       background-color: #7390F9;
-      transform: rotate(-45deg) translate(8.5px, 4px);
+      transform: rotate(-45deg) translate(8.6px, 4.1px);
     }
 
   }
@@ -115,9 +115,10 @@
 @include breakpoint-lg {
   .introduction {
     &__name {
-      &__div{
-        width: 100%;
+      &__div {
+        width: 100vw;
       }
+
       max-width: 60%;
       font-size: $port-sys-font-size-9;
       line-height: 128px;
@@ -130,6 +131,7 @@
       max-width: 40%;
 
     }
+
     &__scrollProjects {
       width: 115px;
       height: 248px;

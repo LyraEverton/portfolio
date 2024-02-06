@@ -6,8 +6,9 @@ import React, {useRef} from "react";
 export const Home = () => {
     const ref = useRef<any>();
     return (<>
-        <Intro scroll={() => ref.current?.handleClick()}/>
+        <Intro handleRefClick={() => ref?.current.handleClick()}/>
         <LatestProjects ref={ref}/>
         <Footer/>
     </>);
 }
+

@@ -6,12 +6,21 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
+  width: 100%;
 
   &__title {
     font-size: $port-sys-font-size-5;
     font-weight: 700;
     letter-spacing: 0;
 
+  }
+
+  &__filter {
+  }
+
+  &__cards {
+    min-width: 100%;
+    flex-wrap: nowrap;
   }
 
   &__filter > span {
@@ -33,4 +42,27 @@
     color: #FFF;
   }
 
+}
+
+
+@include breakpoint-md {
+  .cases {
+
+    &__title {
+    }
+
+    &__filter {
+    }
+
+    &__cards {
+      flex-wrap: wrap;
+    }
+
+    &__filter > span {
+    }
+
+    .active {
+    }
+
+  }
 }

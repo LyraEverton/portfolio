@@ -1,20 +1,21 @@
 import "./Intro.scss";
 import i18next from "i18next";
 import React from "react";
+import {IntroProps, EmojiProps} from "../../interfaces/intro";
 
-export const Intro = (props: any) => {
-    const Emoji = (props: any) => (
+export const Intro = (props: IntroProps) => {
+    const Emoji = (props: EmojiProps) => (
         <span
             className="emoji"
             role="img"
             aria-label={props.label ? props.label : ""}
             aria-hidden={props.label ? "false" : "true"}
         >
-    {props.symbol}
-  </span>
+            {props.symbol}
+        </span>
     );
     return (
-        <div className={"introduction pt-25 px-15 pt-lg-16"}>
+        <div className={"introduction pt-25 px-15 px-lg-25 pt-lg-16"}>
             <div className={"d-md-flex"}>
                 <div className={"introduction__name pl-md-3 d-md-flex items-center"}>
                     <div className={"introduction__name__div"}>
@@ -37,7 +38,7 @@ export const Intro = (props: any) => {
                 </div>
             </div>
 
-            <div className={"introduction__scrollProjects d-flex"} onClick={props.scroll}>
+            <div className={"introduction__scrollProjects d-flex"} onClick={props.handleRefClick}>
                 <div className="introduction__scrollProjects__longArrow"></div>
             </div>
         </div>

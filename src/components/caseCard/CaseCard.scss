@@ -1,0 +1,163 @@
+@import "../../styles/styles";
+.card {
+  position: relative;
+  z-index: 0;
+  flex: 0 1 auto;
+  height: auto;
+  width: 100%;
+
+  &__square {
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    height: 310px;
+  }
+  &__square:before {
+    top: 0;
+    content: '';
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    z-index: 2;
+    border-radius: 90px 0 253.5px 0;
+  }
+  &__square:after {
+    top: 0;
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    border-radius: 253.5px 90px 90px 0;
+  }
+
+  &__title {
+    font-size: $port-sys-font-size-5;
+    font-weight: $port-sys-font-weight-2;
+    line-height: $port-sys-line-height-2;
+    letter-spacing: 0;
+  }
+
+
+  &__viewMore {
+    font-size: $port-sys-font-size-2;
+    font-weight: $port-sys-font-weight-2;
+    line-height: $port-sys-line-height-1;
+    letter-spacing: 0;
+    cursor: pointer;
+
+    &__longArrow {
+      margin-top: 4px;
+      margin-left: 7px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-top: 1px solid #7390F9;
+      border-left: 1px solid #7390F9;
+      transform: rotate(90deg);
+    }
+
+    &__longArrow::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 14px;
+      background-color: #7390F9;
+      transform: rotate(-45deg) translate(4.5px, 1px);
+    }
+  }
+}
+
+@include breakpoint-md {
+  .card {
+    width: 47.5%;
+
+    &__square {
+
+    }
+    &__square:before {
+
+    }
+    &__square:after {
+
+    }
+
+    &__title {
+
+    }
+
+
+    &__viewMore {
+
+      &__longArrow {
+
+      }
+
+      &__longArrow::after {
+
+      }
+    }
+  }
+}
+
+@include breakpoint-lg {
+  .card {
+    &__square {
+      height: 450px;
+    }
+    &__square:before {
+
+    }
+    &__square:after {
+
+    }
+
+    &__title {
+
+    }
+
+
+    &__viewMore {
+
+      &__longArrow {
+
+      }
+
+      &__longArrow::after {
+
+      }
+    }
+  }
+}
+
+@include breakpoint-xl {
+  .card {
+    &__square {
+      height: 500px;
+    }
+    &__square:before {
+
+    }
+    &__square:after {
+
+    }
+
+    &__title {
+
+    }
+
+
+    &__viewMore {
+
+      &__longArrow {
+
+      }
+
+      &__longArrow::after {
+
+      }
+    }
+  }
+}

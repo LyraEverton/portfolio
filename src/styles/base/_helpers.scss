@@ -1,22 +1,5 @@
 @import "../utilities/variables";
 @import "../utilities/mixins";
-
 .container {
   font-family: $port-sys-font-family-primary;
-
-  @include breakpoint-sm {
-    min-width:100%;
-  }
-
-  @include breakpoint-md {
-    min-width:100%;
-  }
-
-  @include breakpoint-lg {
-    min-width:100%;
-  }
-
-  @include breakpoint-xl {
-    min-width:100%;
-  }
 }

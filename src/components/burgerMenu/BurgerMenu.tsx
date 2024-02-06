@@ -1,12 +1,14 @@
 import React, {memo} from "react";
 import {animated, config, useSprings} from "@react-spring/web";
 import "./BurgerMenu.scss";
+import {BurgerMenuInterface, LinearConfigInterface} from "../../interfaces/burgerMenu";
 
-export const BurgerMenu = memo(({isOpen, onClick}: any) => {
-    const linearConfig = {
+
+export const BurgerMenu = memo(({isOpen, onClick}: BurgerMenuInterface) => {
+    const linearConfig: LinearConfigInterface = {
         duration: 100
     };
-    const topRect = async (next: any, isOpen: any) => {
+    const topRect = async (next: any, isOpen: any): Promise<any> => {
         // Stage 1
         await next({
             transform: isOpen
@@ -59,7 +61,7 @@ export const BurgerMenu = memo(({isOpen, onClick}: any) => {
     const [springs] = useSprings(
         3,
         (index) => ({
-            to: async (next) => {
+            to: async (next: any) => {
                 await rects[index](next, isOpen);
             }
         }),
