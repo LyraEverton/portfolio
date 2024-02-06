@@ -84,7 +84,7 @@ export const Cases = () => {
         });
     }
     return (
-        <div className={"cases p-35 px-15 p-md-5 pt-lg-16 p-lg-6"}>
+        <div className={"cases py-35 px-15 p-md-5 pt-lg-16 p-lg-6"}>
             <div className={"cases__title"}>
                 <span className={"d-block"}>Peek into my</span>
                 <span className={"d-block"}>latest projects</span>
